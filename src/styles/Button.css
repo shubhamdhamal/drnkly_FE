@@ -1,0 +1,64 @@
+/* Button Base Styles */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Button Variants */
+.button-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.button-primary:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.button-secondary {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.button-secondary:hover:not(:disabled) {
+  background-color: #d1d5db;
+}
+
+.button-danger {
+  background-color: #dc2626;
+  color: white;
+}
+
+.button-danger:hover:not(:disabled) {
+  background-color: #b91c1c;
+}
+
+/* Loading State */
+.button-loading {
+  position: relative;
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
