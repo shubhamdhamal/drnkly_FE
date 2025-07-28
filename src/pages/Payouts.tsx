@@ -52,7 +52,7 @@ const Payouts: React.FC = () => {
   useEffect(() => {
     const fetchPayouts = async () => {
       try {
-        const res = await axios.get('http://localhost:5001/api/payouts/payouts', {
+        const res = await axios.get('https://drnkly-be.onrender.com/api/payouts/payouts', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('authToken')}`, // ✅ ADD THIS
           },
