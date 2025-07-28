@@ -160,7 +160,7 @@ const Login: React.FC = () => {
 
     try {
       // Use Codespace backend for development to avoid CORS issues
-      const response = await axios.post('http://localhost:5001/api/vendor/login', {
+      const response = await axios.post('https://drnkly-be.onrender.com/api/vendor/login', {
         emailOrPhone,
         password,
       });
