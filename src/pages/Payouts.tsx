@@ -31,7 +31,7 @@ const Payouts: React.FC = () => {
   useEffect(() => {
     const fetchQRCode = async () => {
       try {
-        const res = await axios.get('http://localhost:5001/api/qr/get-qr', {
+        const res = await axios.get('https://drnkly-be.onrender.com/api/qr/get-qr', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
